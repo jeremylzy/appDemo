@@ -1,9 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    lintOptions {
-        abortOnError false
-    }
     signingConfigs {
         release {
             keyAlias 'test'
@@ -21,6 +18,9 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.release
+    }
+    lintOptions {
+        abortOnError false
     }
     buildTypes {
         release {
